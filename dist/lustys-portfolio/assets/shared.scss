@@ -1,0 +1,45 @@
+$bracket: 15%;
+$red: rgb(237, 32, 39);
+$indigo: rgb(119, 82, 162);
+$green: rgb(71, 185, 122);
+$jungle: rgb(13, 158, 147);
+
+.center-image-normal {
+    .cls-5 {
+        fill: $red;
+    }
+  
+    .cls-7 {
+        fill: $indigo;
+    }
+  
+    .cls-9 {
+        fill: $green;
+    }
+  }
+  .center-image-indigo {
+    .cls-5 {
+        fill: $green;
+    }
+  
+    .cls-7 {
+        fill: $red;
+    }
+  
+    .cls-9 {
+        fill: $indigo;
+    }
+  }
+  .center-image-green {
+    .cls-5 {
+        fill: $green;
+    }
+  
+    .cls-7 {
+        fill: $indigo;
+    }
+  
+    .cls-9 {
+        fill: $red;
+    }
+  }

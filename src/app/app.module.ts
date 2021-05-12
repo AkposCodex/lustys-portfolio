@@ -9,11 +9,13 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { MatTooltipModule } from "@angular/material/tooltip";
 
 import { AboutMeComponent } from './about-me/about-me.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

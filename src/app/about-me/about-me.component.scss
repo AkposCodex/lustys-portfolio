@@ -1,3 +1,52 @@
-.about-header{
-    margin-top: 5em;
+@import "../../assets/shared.scss";
+
+.body {
+    display: inline-block;
+    padding: 2em 0;
+    margin: 0;
+    width: 100%;
+
+    header {
+        height: max-content;
+        text-align: center;
+        h1 {
+            display: inline-block;
+            position: relative;
+            font-size: 6rem;
+            height: max-content;
+            padding-left: .5em;
+            line-height: 1em;
+        }
+        
+        h1::before {
+            position: absolute;
+            z-index: -1;
+            content: "";
+            width: 70%;
+            height: 120%;
+            top: -0.1em;
+            background: $jungle
+        }
+    }
+    .content {
+        width: 90%;
+        padding: 1em;
+        margin: auto;
+        p {
+            font-family: Catamaran;
+            display: inline-block;
+            font-size: 1rem;
+            line-height: 1.5em;
+            // word-wrap: break-word;
+        }
+
+        h1{
+            padding: 1em .5em;
+            font-weight: 600;
+        }
+
+        a{
+            color: black;
+        }
+    }
 }
