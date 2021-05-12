@@ -1,0 +1,87 @@
+$bracket: 15%;
+$red: rgb(237, 32, 39);
+$indigo: rgb(119,82,162);
+$green: rgb(71, 185, 122);
+
+.body {
+    color: white;
+    width: 100vw;
+    height: min-content;
+    position: relative;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: black;
+
+    .bracket-top {
+        position: absolute;
+        width: $bracket;
+        height: auto;
+        padding: 16px;
+        top: 16px;
+        left: 16px;
+    }
+
+    .mark {
+        padding: 2.5% 0;
+        width: 100%;
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        img {
+            margin: auto;
+            width: 64.2%;
+            height: auto;
+        }
+    }
+
+    .tagline {
+        padding: 1em 1em;
+        font-size: 40px;
+        line-height: 1em;
+        color: rgba($color: white, $alpha: 1.0);
+        display: inline-block;
+    }
+    
+    .glass{
+        display: inline-block;
+        position: absolute;
+        background: rgba($color: $indigo, $alpha: .3);
+        border-radius: .5em;
+        top: 70%;
+        left: 35%;
+        backdrop-filter: blur(30px);
+    }
+
+    .navi {
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+        font-size: 20px;
+        z-index: 2;
+
+        li {
+            display: block;
+            width: fit-content;
+
+            a {
+                text-decoration: none;
+                color: white;
+                img {
+                    margin: 5px 8px;
+                    width: 25px;
+                }
+            }
+        }
+    }
+
+    .bracket-bottom {
+        position: absolute;
+        width: $bracket;
+        height: auto;
+        padding: 16px;
+        bottom: 16px;
+        right: 16px;
+        z-index: 1;
+    }
+}
