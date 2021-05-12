@@ -49,4 +49,21 @@
             color: black;
         }
     }
+
+    .glass{
+        background: rgba($color: $jungle, $alpha: .4);
+        backdrop-filter: blur(40px);
+
+    }
+
+    .socials{
+        display: grid;
+        width: 100%;
+        height: max-content;
+        background: url(../../assets/SVG/center-image.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
