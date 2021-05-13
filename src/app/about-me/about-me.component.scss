@@ -14,10 +14,10 @@
             position: relative;
             font-size: 6rem;
             height: max-content;
-            padding-left: .5em;
+            padding-left: 0.5em;
             line-height: 1em;
         }
-        
+
         h1::before {
             position: absolute;
             z-index: -1;
@@ -25,7 +25,7 @@
             width: 70%;
             height: 120%;
             top: -0.1em;
-            background: $jungle
+            background: $jungle;
         }
     }
     .content {
@@ -40,30 +40,47 @@
             // word-wrap: break-word;
         }
 
-        h1{
-            padding: 1em .5em;
+        h1 {
+            padding: 1em 0.5em;
             font-weight: 600;
         }
 
-        a{
+        a {
             color: black;
         }
     }
 
-    .glass{
-        background: rgba($color: $jungle, $alpha: .4);
+    .glass {
+        background: rgba($color: rgb(226, 220, 220), $alpha: 0.4);
         backdrop-filter: blur(40px);
+        margin: 0 2em;
+        border-radius: 10%;
+        text-align: center;
 
+        p {
+            margin-bottom: 1em;
+            display: block;
+            font-size: 2rem;
+        }
+
+        svg {
+            width: 150px;
+            margin: auto;
+        }
+        img {
+            width: 150px;
+            margin: auto;
+        }
     }
 
-    .socials{
+    .socials {
         display: grid;
         width: 100%;
         height: max-content;
         background: url(../../assets/SVG/center-image.svg);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 50%;
+        background-size: 70%;
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
