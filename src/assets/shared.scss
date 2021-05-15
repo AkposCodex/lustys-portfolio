@@ -1,45 +1,61 @@
 $bracket: 15%;
+
+//Color constants
 $red: rgb(237, 32, 39);
 $indigo: rgb(119, 82, 162);
 $green: rgb(71, 185, 122);
 $jungle: rgb(13, 158, 147);
 
+//Screen sizes
+$phone: (
+    max: 640,
+    min: 320,
+);
+$tablet: (
+    min: 760,
+    max: 1024,
+);
+$laptops: (
+    min: 1024,
+    max: 1080,
+);
+
 .center-image-normal {
     .cls-5 {
         fill: $red;
     }
-  
+
     .cls-7 {
         fill: $indigo;
     }
-  
+
     .cls-9 {
         fill: $green;
     }
-  }
-  .center-image-indigo {
+}
+.center-image-indigo {
     .cls-5 {
         fill: $green;
     }
-  
+
     .cls-7 {
         fill: $red;
     }
-  
+
     .cls-9 {
         fill: $indigo;
     }
-  }
-  .center-image-green {
+}
+.center-image-green {
     .cls-5 {
         fill: $green;
     }
-  
+
     .cls-7 {
         fill: $indigo;
     }
-  
+
     .cls-9 {
         fill: $red;
     }
-  }
+}

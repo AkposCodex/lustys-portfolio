@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Orbitron:wght@500&family=Spartan:wght@100;300;600&family=Catamaran:wght@400;500&family=Lato:wght@400;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Hairline&family=Bungee+Inline&family=Bungee+Outline&family=Bungee+Shade&display=swap");
 @import "~@angular/material/theming";
-
+@import "/src/assets/shared.scss";
 
 // Plus imports for other components in your app.
 
@@ -43,12 +43,9 @@ $lustys-portfolio-theme: mat-light-theme(
 html,
 body {
   height: 100%;
-}
-body {
   margin: 0;
   font-family: Spartan, "Helvetica Neue", sans-serif;
   // overflow: hidden;
-
 }
 
 header {
