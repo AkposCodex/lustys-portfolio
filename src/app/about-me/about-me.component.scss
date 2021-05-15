@@ -20,6 +20,9 @@
             @include xs {
                 font-size: 3rem;
             }
+            @include sm{
+                font-size: 4.5rem;
+            }
         }
 
         h1::before {
@@ -30,6 +33,10 @@
             height: 120%;
             top: -0.1em;
             background: $jungle;
+            @include xs{
+                width: 50%;
+                
+            }
         }
     }
     .content {
@@ -88,11 +95,13 @@
         width: 90%;
         height: max-content;
         margin: auto;
+        padding: 0;
         background: url(../../assets/SVG/center-image.svg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: 70%;
         grid-template-columns: 1fr 1fr 1fr;
         overflow: scroll;
+        scrollbar-color: $jungle;
     }
 }
