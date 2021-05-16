@@ -8,6 +8,32 @@
     position: relative;
     background: black;
 
+    @include xs {
+        height: 100vh;
+        // text-align: center;
+
+        .tagline {
+            margin-top: 5%;
+            p {
+                font-size: 3rem;
+                line-height: 1em;
+            }
+        }
+        .mark {
+            margin: 0;
+            svg {
+                width: 80%;
+            }
+        }
+        .navi {
+            ul {
+                li {
+                    display: inline;
+                }
+            }
+        }
+    }
+
     .bracket-top {
         position: absolute;
         width: 15%;
@@ -31,6 +57,11 @@
             width: 64.2%;
             height: auto;
         }
+        svg {
+            margin: auto;
+            width: 64.2%;
+            height: auto;
+        }
     }
 
     .tagline {
@@ -38,10 +69,6 @@
         font-size: 40px;
         line-height: 1em;
         color: white;
-        display: inline-block;
-        @include xs {
-            font-size: 25px;
-        }
     }
 
     .navi {
@@ -62,9 +89,9 @@
                     margin: 5px 8px;
                     width: 25px;
 
-                    @include xs {
-                        width: 20px;
-                    }
+                    // @include xs {
+                    //     width: 20px;
+                    // }
                 }
             }
         }
