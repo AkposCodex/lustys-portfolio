@@ -20,6 +20,9 @@ $lustys-portfolio-accent: mat-palette($mat-cyan, A700, A400);
 
 // The warn palette is optional (defaults to red).
 $lustys-portfolio-warn: mat-palette($mat-red);
+$lustys-portfolio-typography: mat-typography-config(
+  $font-family: "Spartan",
+);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
