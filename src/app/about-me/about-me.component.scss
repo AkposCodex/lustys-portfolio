@@ -3,7 +3,7 @@
 
 .body {
     // display: inline-block;
-    padding: 2em 0;
+    // padding: 2em 0;
     margin: 0;
     width: 100vw;
 
@@ -15,12 +15,12 @@
             position: relative;
             font-size: 6rem;
             height: max-content;
-            padding-left: 0.5em;
+            padding: 0 0.5em;
             line-height: 1em;
             @include xs {
                 font-size: 3rem;
             }
-            @include sm{
+            @include sm {
                 font-size: 4.5rem;
             }
         }
@@ -33,12 +33,12 @@
             height: 120%;
             top: -0.1em;
             background: $jungle;
-            @include xs{
+            @include xs {
                 width: 50%;
-                
             }
         }
     }
+
     .content {
         width: 90%;
         padding: 1em;
@@ -61,50 +61,161 @@
         a {
             color: black;
         }
-    }
 
-    .glass {
-        background: rgba($color: rgb(226, 220, 220), $alpha: 0.4);
-        backdrop-filter: blur(10px);
-        margin: 0 1em;
-        border-radius: 10%;
-        text-align: center;
-        @include xs{
+        .glass {
+            background: rgba($color: rgb(226, 220, 220), $alpha: 0.4);
+            backdrop-filter: blur(10px);
             margin: 0 1em;
-        }
+            border-radius: 10%;
+            text-align: center;
+            @include xs {
+                margin: 0 1em;
+            }
 
-        p {
-            margin-bottom: 1em;
-            display: block;
-            padding: 0 .8em;
-            font-size: 1.5rem;
-            @include xs{
-                font-size: 1.3rem;
+            p {
+                margin-bottom: 1em;
+                display: block;
+                padding: 0 0.8em;
+                font-size: 1.5rem;
+                @include xs {
+                    font-size: 1.3rem;
+                }
+            }
+
+            svg {
+                width: 40%;
+                margin: auto;
+            }
+            img {
+                width: 40%;
+                margin: auto;
             }
         }
 
-        svg {
-            width: 40%;
+        .socials {
+            display: grid;
+            width: 90%;
+            height: max-content;
             margin: auto;
-        }
-        img {
-            width: 40%;
-            margin: auto;
+            padding: 0;
+            background: url(../../assets/SVG/center-image.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 70%;
+            grid-template-columns: 1fr 1fr 1fr;
+            @include xs {
+                overflow-x: scroll;
+            }
+            @include edge {
+                overflow-x: scroll;
+            }
+            scrollbar-color: $jungle;
         }
     }
 
-    .socials {
+    .tools-section {
+        h1 {
+            text-align: center;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+
+    .tools {
+        width: 100vw;
         display: grid;
-        width: 90%;
-        height: max-content;
-        margin: auto;
-        padding: 0;
-        background: url(../../assets/SVG/center-image.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 70%;
-        grid-template-columns: 1fr 1fr 1fr;
-        overflow: scroll;
-        scrollbar-color: $jungle;
+        grid-template-columns: 1fr 1fr;
+
+        @include xs {
+            overflow-x: scroll;
+        }
+
+        p {
+            text-align: center;
+            i {
+                width: 32px;
+            }
+        }
+        h3 {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .products {
+            grid-column-start: 1;
+            padding: 3em;
+            color: white;
+            font-size: 1rem;
+
+            @include xs {
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding: 0.5em;
+            }
+            background-color: rgb(78, 73, 73);
+            .apps {
+                margin-top: 2em;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+
+                p {
+                    padding: 1em;
+                }
+            }
+        }
+        .skills {
+            grid-column-start: 2;
+            padding: 3em;
+            color: rgb(78, 73, 73);
+            font-size: 1rem;
+
+            @include xs {
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding: 0.5em;
+            }
+            .stack {
+                display: grid;
+                margin-top: 2em;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+
+                p {
+                    padding: 1em;
+                    text-align: start;
+
+                    i {
+                        font-size: 2em;
+                    }
+
+                    .fa-html5 {
+                        color: #fd6529;
+                    }
+
+                    .fa-css3-alt {
+                        color: #0074b9;
+                    }
+
+                    .fa-js-square {
+                        color: #f0db4f;
+                    }
+
+                    .fa-node-js {
+                        color: #3c873a;
+                    }
+
+                    .fa-angular {
+                        color: #dd1b16;
+                    }
+                }
+            }
+        }
     }
 }
