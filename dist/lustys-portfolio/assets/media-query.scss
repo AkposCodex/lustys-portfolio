@@ -24,6 +24,12 @@ $screen-xl-max: 5000px;
   }
 }
 
+@mixin edge-max {
+  @media screen and (min-width: #{$edge-max}) {
+    @content;
+  }
+}
+
 @mixin sm {
   @media screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}) {
     @content;
