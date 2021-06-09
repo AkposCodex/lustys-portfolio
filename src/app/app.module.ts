@@ -7,15 +7,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatTooltipModule } from "@angular/material/tooltip";
+import { MatButtonModule } from "@angular/material/button";
 
 import { AboutMeComponent } from './about-me/about-me.component';
 import { HomeComponent } from './home/home.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutMeComponent,
-    HomeComponent
+    HomeComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +26,7 @@ import { HomeComponent } from './home/home.component';
     BrowserAnimationsModule,
     MatTabsModule,
     MatTooltipModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

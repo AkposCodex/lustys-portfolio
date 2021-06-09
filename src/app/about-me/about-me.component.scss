@@ -3,9 +3,14 @@
 
 .body {
     // display: inline-block;
-    // padding: 2em 0;
+    padding-top: 2em;
+    padding-bottom: calc(safe-area-inset-bottom + 20px);
     margin: 0;
-    width: 100vw;
+    width: auto;
+
+    button {
+        margin-left: 2em;
+    }
 
     header {
         height: max-content;
@@ -32,7 +37,7 @@
             width: 70%;
             height: 120%;
             top: -0.1em;
-            background: $jungle;
+            background: $red;
             @include xs {
                 width: 50%;
             }
@@ -135,6 +140,7 @@
             }
 
             p {
+                font-weight: 300;
                 text-align: center;
                 i {
                     width: 32px;
@@ -201,7 +207,5 @@
             }
         }
     }
-
-
 
 }
