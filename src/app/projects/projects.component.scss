@@ -76,11 +76,13 @@
             @include xs {
                 margin: auto;
                 width: 300px;
+                padding: 20px 0;
             }
 
             @include sm {
                 margin: auto;
                 width: auto;
+                padding: 0;
             }
             a {
                 i {
