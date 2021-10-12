@@ -1,6 +1,6 @@
 @import "../../assets/shared.scss";
 @import "../../assets/media-query.scss";
-
+$anim: 1s;
 .body {
     position: relative;
     width: 100vw;
@@ -41,6 +41,7 @@
         height: auto;
         padding: 16px;
         top: 16px;
+        animation: topBracketAnim $anim linear forwards;
         left: 16px;
         @include xs {
             width: 10%;
@@ -53,6 +54,7 @@
         display: flex;
         align-self: center;
         justify-self: center;
+        animation: fadeIn $anim forwards ease-in;
         img {
             margin: auto;
             width: 64.2%;
@@ -62,6 +64,10 @@
             margin: auto;
             width: 64.2%;
             height: auto;
+
+            .cls-2{
+                animation: changeBackground 5s infinite both;
+            }
         }
     }
 
@@ -106,9 +112,56 @@
         padding: 16px;
         bottom: 16px;
         right: 16px;
+        animation: botBracketAnim $anim ease-in-out backwards;
         z-index: 1;
         @include xs {
             width: 10%;
         }
+    }
+}
+
+@keyframes topBracketAnim {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes botBracketAnim {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes changeBackground {
+    0%{
+        fill: $jungle;
+    }
+    30%{
+        fill: $indigo
+    }
+    50%{
+        fill: $red;
+    }
+    75%{
+        fill: $green;
+    }
+    100%{
+        fill: $jungle
     }
 }

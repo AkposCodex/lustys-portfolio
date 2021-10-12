@@ -3,7 +3,9 @@
 @import "~@angular/material/theming";
 @import "/src/assets/shared.scss";
 
-$lustys-portfolio-primary: mat-palette($mat-light-blue, 400);
+
+
+$lustys-portfolio-primary: mat-palette($green-palette, 500);
 $lustys-portfolio-accent: mat-palette($mat-cyan, A700, A400);
 
 $lustys-portfolio-warn: mat-palette($mat-red);

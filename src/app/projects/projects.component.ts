@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectsComponent implements OnInit {
 
   constructor() { }
-
+  htmlValue = 100
+  cssValue = 60
+  TSValue = 70
   ngOnInit(): void {
   }
-
 }

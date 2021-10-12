@@ -3,10 +3,10 @@
 
 .body {
     // display: inline-block;
-    padding-top: 2em;
+    // padding-top: 2em;
     padding-bottom: calc(safe-area-inset-bottom + 20px);
     margin: 0;
-    width: auto;
+    width: min-content;
 
     button {
         margin-left: 2em;
