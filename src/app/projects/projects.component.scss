@@ -37,19 +37,45 @@ body {
     }
 
     header {
-        height: max-content;
-        // margin-bottom: 1em;
-        text-align: center;
-        padding: 8px;
+        position: relative;
+        height: 70vh;
+        width: 100%;
+        background: rgba($color: #141f25, $alpha: 1);
 
+        // text-align: center;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .header_image {
+            height: 100%;
+            width: 50%;
+            div {
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                background: rgba($color: #141f25, $alpha: 0.6);
+            }
+        }
         h1 {
             font-size: 45px;
+            position: absolute;
             margin: 0;
+            color: white;
+            bottom: 50%;
+            right: 0;
+            left: 0;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 99;
         }
 
         a {
-            display: flex;
-            width: min-content;
+            position: absolute;
+            z-index: 99;
         }
     }
 }
@@ -57,188 +83,46 @@ body ::-webkit-scrollbar {
     display: none;
 }
 
-.last-entry {
-    height: 140vh;
-}
-
-.project {
-    color: $jungle;
-    height: 70vh;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 4em 0 10em;
-
-    @include xs {
-        // flex-direction: column;
-        display: block;
-        margin: 4em 0 3em;
-        height: auto;
-    }
-
-    @include sm {
-        height: 110vh;
-        margin: 4em 0 5em;
-        display: block;
-    }
-
-    a {
-        color: $jungle;
-    }
-
-    p {
-        padding: 20px;
-        display: block;
-        width: 500px;
-
-        i {
-            color: $jungle;
-        }
-    }
-
-    .text {
-        .tech {
-            p {
-                padding: 10px;
-            }
-            .mat-progress-bar {
-                width: 60%;
-            }
-        }
-        p {
-            @include xs {
-                margin: auto;
-                width: 300px;
-                padding: 20px 0;
-            }
-            text-align: justify;
-            @include sm {
-                margin: auto;
-                width: auto;
-                padding: 0;
-            }
-            a {
-                i {
-                    margin: 0 0.5em;
-                }
-            }
-        }
-    }
-
-    .preview {
-        // perspective: 1000px;
-        width: auto;
-
-        @include xs {
-            margin-bottom: 3em;
-            height: auto;
-        }
-
-        @include sm {
-            // margin-bottom: 3em;
-            perspective: none;
-        }
-        img {
-            // transform: skewY(20deg);
-            // transform: skewY(40deg);
-            // transform: rotateY(-30deg) skewY(8deg);
-            // transform-style: preserve-3d;
-            width: 400px;
-            height: 400px;
-            // box-shadow: 30px -20px 5px rgba(0, 0, 0, 1);
-            backdrop-filter: drop-shadow();
-
-            @include xs {
-                width: 200px;
-                height: 250px;
-            }
-
-            @include sm {
-                // transform: none;
-            }
-        }
-
-        iframe {
-            // transform: skewY(20deg);
-            // transform: skewY(40deg);
-            // transform: rotateY(-30deg) skewY(8deg);
-            // transform-style: preserve-3d;
-            width: 400px;
-            height: 400px;
-            // box-shadow: 30px -20px 5px rgba(0, 0, 0, 0.7);
-            // backdrop-filter: drop-shadow();
-            border: $jungle solid 3px;
-            border-radius: 10px;
-
-            @include xs {
-                width: 200px;
-                margin-bottom: 3em;
-                height: 250px;
-            }
-
-            @include sm {
-                // transform: none;
-                // transform-style: flat;
-            }
-        }
-    }
-}
-
 .pro-card {
     width: 70%;
     height: 70%;
     margin: 48px auto;
     border-radius: 10px;
-
-    a {
-        text-decoration: none;
-    }
-}
-
-.lmw {
-    background: url(../../assets/1x/lmw.png);
-    background-repeat: no-repeat;
-    background-position-y: -0px;
-    background-size: cover;
-}
-.smp {
-    background: url(../../assets/1x/smplive.png);
-    background-repeat: no-repeat;
-    background-position-y: -0px;
-    background-size: cover;
-}
-.isyms {
-    background: url(../../assets/1x/isyms.png);
-    background-repeat: no-repeat;
-    background-position-y: -0px;
-    background-size: cover;
-}
-
-.overlay {
-    width: 100%;
-    display: flex;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.555);
-    border-radius: 10px;
-    align-items: center;
-    justify-items: center;
-    z-index: 2;
-
-    img{
-        width: 90%;
-        z-index: -1;
-    }
+    position: relative;
+    background: black;
+    
     p {
+        position: absolute;
+        text-decoration: none;
+        width: fit-content;
+        font-size: 30px;
+        margin: 0;
         color: white;
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-        text-align: center;
-
-        width: 100%;
-        font-size: 3rem;
-        margin: auto;
+        bottom: 50%;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 99;
     }
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    .over {
+        position: absolute;
+        width: 100%;
+        border-radius: 10px;
+        height: 100%;
+        top: 0;
+        background: rgba($color: #141f25, $alpha: 0.6);
+    }
+}
+
+.pro-card:hover {
+    animation: 1000ms 1 normal  running swell cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 @keyframes stretch {
@@ -253,6 +137,18 @@ body ::-webkit-scrollbar {
     100% {
         margin: 0;
     }
+}
+
+@keyframes swell {
+    0% {
+        transform: scale3d(1.05, 1.05, 0.5);
+        transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+    }
+
+    // 100%{
+    //     transform: scale3d(0.5);
+    //     transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+    // }
 }
 
 @keyframes box {
