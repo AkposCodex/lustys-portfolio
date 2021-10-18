@@ -20,7 +20,7 @@ body {
         font-family: Bungee Shade;
         letter-spacing: 0.1em;
         text-align: center;
-        
+
         // span{
         //     margin: 0;
         //     animation: stretch 1.8s  cubic-bezier(0.92, 0, 0.57, 0.34);
@@ -29,7 +29,6 @@ body {
         //     border-radius: 30px;
         //     padding: 16px;
         // }
-
     }
 
     p {
@@ -192,7 +191,7 @@ body ::-webkit-scrollbar {
     margin: 48px auto;
     border-radius: 10px;
 
-    a{
+    a {
         text-decoration: none;
     }
 }
@@ -202,10 +201,6 @@ body ::-webkit-scrollbar {
     background-repeat: no-repeat;
     background-position-y: -0px;
     background-size: cover;
-
-    :hover{
-        background-size: 10em;
-    }
 }
 .smp {
     background: url(../../assets/1x/smplive.png);
@@ -228,21 +223,18 @@ body ::-webkit-scrollbar {
     border-radius: 10px;
     align-items: center;
     justify-items: center;
-    // backdrop-filter: brightness(-5);
+    z-index: 2;
 
-    :hover{
-        background-size: 10em;
+    img{
+        width: 90%;
+        z-index: -1;
     }
-    position: relative;
     p {
-        // position: absolute;
-        // bottom: 0;
-        // left: 25%;
         color: white;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
         text-align: center;
-        // background: rgba(0, 0, 0, 0.8);
+
         width: 100%;
         font-size: 3rem;
         margin: auto;
@@ -250,29 +242,29 @@ body ::-webkit-scrollbar {
 }
 
 @keyframes stretch {
-    0%{
+    0% {
         margin: 0;
     }
 
-    75%{
-        margin: 0 .2em;
+    75% {
+        margin: 0 0.2em;
     }
 
-    100%{
+    100% {
         margin: 0;
     }
 }
 
 @keyframes box {
-    0%{
+    0% {
         width: 0;
     }
 
-    75%{
-        width: .6em;
+    75% {
+        width: 0.6em;
     }
 
-    100%{
+    100% {
         width: 0;
     }
 }

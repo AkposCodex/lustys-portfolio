@@ -1,211 +1,261 @@
 @import "../../assets/shared.scss";
 @import "../../assets/media-query.scss";
 
-.body {
-    // display: inline-block;
-    // padding-top: 2em;
-    padding-bottom: calc(safe-area-inset-bottom + 20px);
-    margin: 0;
-    width: min-content;
+// .body {
+//     // display: inline-block;
+//     // padding-top: 2em;
+//     padding-bottom: calc(safe-area-inset-bottom + 20px);
+//     margin: 0;
+//     width: min-content;
 
-    button {
-        margin-left: 2em;
+//     button {
+//         margin-left: 2em;
+//     }
+
+//     header {
+//         height: max-content;
+//         text-align: center;
+//         h1 {
+//             display: inline-block;
+//             position: relative;
+//             font-size: 6rem;
+//             height: max-content;
+//             padding: 0 0.5em;
+//             line-height: 1em;
+//             @include xs {
+//                 font-size: 3rem;
+//             }
+//             @include sm {
+//                 font-size: 4.5rem;
+//             }
+//         }
+
+//         h1::before {
+//             position: absolute;
+//             z-index: -1;
+//             content: "";
+//             width: 70%;
+//             height: 120%;
+//             top: -0.1em;
+//             background: $jungle;
+//             @include xs {
+//                 width: 50%;
+//             }
+//         }
+//     }
+
+.content {
+    width: 90%;
+    padding: 1em;
+    margin: auto;
+    font-family: Catamaran;
+    // text-align: center;
+    p {
+        font-family: Catamaran;
+        display: inline-block;
+        font-size: 1rem;
+        line-height: 1.5em;
+        // word-wrap: break-word;
     }
 
-    header {
-        height: max-content;
+    h1 {
+        padding: 0.5em;
+        font-weight: 600;
+        font-size: 30px;
         text-align: center;
-        h1 {
-            display: inline-block;
-            position: relative;
-            font-size: 6rem;
-            height: max-content;
-            padding: 0 0.5em;
-            line-height: 1em;
-            @include xs {
-                font-size: 3rem;
-            }
-            @include sm {
-                font-size: 4.5rem;
-            }
-        }
-
-        h1::before {
-            position: absolute;
-            z-index: -1;
-            content: "";
-            width: 70%;
-            height: 120%;
-            top: -0.1em;
-            background: $jungle;
-            @include xs {
-                width: 50%;
-            }
-        }
     }
 
-    .content {
-        width: 90%;
-        padding: 1em;
-        margin: auto;
+    h3 {
+        padding: 0.5em;
+        font-family: Catamaran;
+        font-size: 30px;
+    }
+
+    a {
+        color: black;
+    }
+
+    .glass {
+        background: rgba($color: rgb(226, 220, 220), $alpha: 0.4);
+        backdrop-filter: blur(10px);
+        margin: 0 1em;
+        border-radius: 10%;
         text-align: center;
-        p {
-            font-family: Catamaran;
-            display: inline-block;
-            font-size: 1rem;
-            line-height: 1.5em;
-            // word-wrap: break-word;
-        }
-
-        h1 {
-            padding: 0.5em;
-            font-weight: 600;
-            font-size: 30px;
-        }
-
-        a {
-            color: black;
-        }
-
-        .glass {
-            background: rgba($color: rgb(226, 220, 220), $alpha: 0.4);
-            backdrop-filter: blur(10px);
+        @include xs {
             margin: 0 1em;
-            border-radius: 10%;
-            text-align: center;
+        }
+
+        p {
+            margin-bottom: 1em;
+            display: block;
+            padding: 0 0.8em;
+            font-size: 1.5rem;
             @include xs {
-                margin: 0 1em;
-            }
-
-            p {
-                margin-bottom: 1em;
-                display: block;
-                padding: 0 0.8em;
-                font-size: 1.5rem;
-                @include xs {
-                    font-size: 1.3rem;
-                }
-            }
-
-            svg {
-                width: 40%;
-                margin: auto;
-            }
-            img {
-                width: 40%;
-                margin: auto;
+                font-size: 1.3rem;
             }
         }
 
-        .socials {
-            display: grid;
-            width: 90%;
-            height: max-content;
+        svg {
+            width: 40%;
             margin: auto;
-            padding: 0;
-            background: url(../../assets/SVG/center-image.svg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 70%;
-            grid-template-columns: 1fr 1fr 1fr;
-            @include xs {
-                overflow-x: scroll;
-            }
-            @include edge {
-                overflow-x: scroll;
-            }
-            scrollbar-color: $jungle;
+        }
+        img {
+            width: 40%;
+            margin: auto;
         }
     }
 
-    .grid-section {
+    .socials {
+        display: grid;
+        width: 90%;
+        height: max-content;
+        margin: auto;
+        padding: 0;
+        background: url(../../assets/SVG/center-image.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 70%;
+        grid-template-columns: 1fr 1fr 1fr;
+        @include xs {
+            overflow-x: scroll;
+        }
+        @include edge {
+            overflow-x: scroll;
+        }
+        scrollbar-color: $jungle;
+    }
+}
+
+.grid-section {
+    h1 {
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    h1 {
+        padding: 0.5em;
+        font-weight: 600;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .grid-body {
+        width: 100vw;
+        @include edge-max {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include xs {
+            display: grid;
+            // overflow-x: scroll;
+            // grid-template-columns: none;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        p {
+            font-weight: 300;
+            text-align: center;
+            i {
+                width: 32px;
+            }
+        }
+        h3 {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
         h1 {
             text-align: center;
             grid-column-start: 1;
             grid-column-end: 3;
         }
 
-        .grid-body {
-            width: 100vw;
-            @include edge-max {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-            }
+        .grid-1 {
+            // grid-column-start: 1;
+            padding: 3em;
+            color: white;
+            font-size: 1rem;
 
             @include xs {
+                font-size: 0.8rem;
+                font-weight: 600;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                padding: 0.5em;
+            }
+            background-color: rgb(78, 73, 73);
+            .subgrid {
+                margin-top: 2em;
                 display: grid;
-                // overflow-x: scroll;
-                // grid-template-columns: none;
+                grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr 1fr;
-            }
 
-            p {
-                font-weight: 300;
-                text-align: center;
-                i {
-                    width: 32px;
+                p {
+                    padding: 1em;
                 }
             }
-            h3 {
-                font-size: 1.5em;
-                text-align: center;
+        }
+        .grid-2 {
+            // grid-column-start: 2;
+            padding: 3em;
+            color: rgb(78, 73, 73);
+            font-size: 1rem;
+
+            @include xs {
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding: 0.5em;
             }
+            .subgrid {
+                display: grid;
+                margin-top: 2em;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
 
-            h1 {
-                text-align: center;
-                grid-column-start: 1;
-                grid-column-end: 3;
-            }
-
-            .grid-1 {
-                // grid-column-start: 1;
-                padding: 3em;
-                color: white;
-                font-size: 1rem;
-
-                @include xs {
-                    font-size: 0.8rem;
-                    font-weight: 600;
-                    grid-row-start: 1;
-                    grid-row-end: 2;
-                    padding: 0.5em;
-                }
-                background-color: rgb(78, 73, 73);
-                .subgrid {
-                    margin-top: 2em;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: 1fr 1fr;
-
-                    p {
-                        padding: 1em;
-                    }
-                }
-            }
-            .grid-2 {
-                // grid-column-start: 2;
-                padding: 3em;
-                color: rgb(78, 73, 73);
-                font-size: 1rem;
-
-                @include xs {
-                    font-size: 0.8rem;
-                    font-weight: 600;
-                    padding: 0.5em;
-                }
-                .subgrid {
-                    display: grid;
-                    margin-top: 2em;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: 1fr 1fr 1fr;
-
-                    p {
-                        padding: 1em;
-                        text-align: start;
-                    }
+                p {
+                    padding: 1em;
+                    text-align: start;
                 }
             }
         }
     }
+}
 
+header {
+    width: 100%;
+    height: 70vh;
+    div {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        // backdrop-filter: blur(2px);
+        background: rgba($color: #0c080f, $alpha: 0.4);
+    }
+    img.header_img {
+        width: 100%;
+        height: 71.5%;
+        object-fit: cover;
+        object-position: 0% 50%;
+    }
+    a {
+        position: absolute;
+        z-index: 99;
+    }
+    .logo {
+        width: 30%;
+        height: auto;
+        position: absolute;
+        bottom: 30%;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        background: rgba($color: #0c080f, $alpha: 1);
+        padding: 6px;
+
+        img {
+            width: 100%;
+        }
+    }
 }
