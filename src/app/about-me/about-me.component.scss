@@ -1,7 +1,6 @@
 @import "../../assets/shared.scss";
 @import "../../assets/media-query.scss";
 
-
 .content {
     width: 90%;
     padding: 1em;
@@ -188,7 +187,17 @@ header {
         width: 100%;
         height: 51%;
         // backdrop-filter: blur(2px);
-        background: rgba($color: #0c080f, $alpha: 0.4);
+        background: rgba($color: #0c080f, $alpha: 0.3);
+        .navi {
+            ul {
+                display: flex;
+                flex-direction: row;
+                li {
+                    display: block;
+                    color: white;
+                }
+            }
+        }
     }
     img.header_img {
         width: 100%;
@@ -200,6 +209,7 @@ header {
         position: absolute;
         z-index: 99;
     }
+
     .logo {
         width: 30%;
         height: auto;

@@ -57,7 +57,7 @@ body {
                 position: absolute;
                 width: 50%;
                 height: 100%;
-                background: rgba($color: #141f25, $alpha: 0.6);
+                background: rgba($color: #3c819e, $alpha: 0.4);
             }
         }
         h1 {
@@ -90,7 +90,7 @@ body ::-webkit-scrollbar {
     border-radius: 10px;
     position: relative;
     background: black;
-    
+
     p {
         position: absolute;
         text-decoration: none;
@@ -118,11 +118,14 @@ body ::-webkit-scrollbar {
         height: 100%;
         top: 0;
         background: rgba($color: #141f25, $alpha: 0.6);
+        transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
     }
 }
 
 .pro-card:hover {
-    animation: 1000ms 1 normal  running swell cubic-bezier(0.215, 0.61, 0.355, 1);
+    // animation: 1000ms 1 normal  running swell cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: scale3d(1.05, 1.05, 0.5);
+    transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
 }
 
 @keyframes stretch {
