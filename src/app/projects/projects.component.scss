@@ -59,6 +59,21 @@ body {
                 height: 100%;
                 background: rgba($color: #3c819e, $alpha: 0.4);
             }
+            nav {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                ul {
+                    li {
+                        font-size: 28px;
+                        display: inline;
+                        a {
+                            color: white;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
         }
         h1 {
             font-size: 45px;
@@ -73,7 +88,7 @@ body {
             z-index: 99;
         }
 
-        a {
+        .logo {
             position: absolute;
             z-index: 99;
         }
